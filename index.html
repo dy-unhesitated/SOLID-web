@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="nl" data-page="home">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLID Collective — De broedplaats voor creatief ondernemend Etten-Leur</title>
+<meta name="description" content="SOLID Collective is de bruisende broedplaats voor creatief ondernemend Etten-Leur. Events, podcast, studio's en kantoorruimtes aan de Lambertusstraat.">
+<meta name="theme-color" content="#090909">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg?v=1">
+<link rel="preload" href="fonts/impact.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lenis.css">
+<link rel="stylesheet" href="css/style.css?v=1">
+<script>
+  // Startstaat vóór eerste paint: preloader (1e bezoek home) of transitie-doek (na klik)
+  (function (h) {
+    h.classList.add("js");
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    try {
+      if (sessionStorage.getItem("solid-transition") !== null) h.classList.add("is-arriving");
+      else if (h.dataset.page === "home" && !sessionStorage.getItem("solid-visited")) h.classList.add("is-loading");
+    } catch (e) {}
+  })(document.documentElement);
+</script>
+</head>
+<body data-theme="dark">
+
+<a class="skip-link" href="#main">Naar inhoud</a>
+
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__word"><span>S</span><span>O</span><span>L</span><span>I</span><span>D</span><i class="preloader__dot"></i></div>
+  <div class="preloader__tag">Etten-Leur &mdash; Broedplaats</div>
+  <div class="preloader__count">000</div>
+  <div class="preloader__fill"></div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="index.html" data-title="Home" aria-label="SOLID Collective — naar home">
+    <img class="logo__light" src="images/logos/solid-logo-white.png" alt="" width="1281" height="551">
+    <img class="logo__dark" src="images/logos/solid-logo-black.png" alt="" width="1281" height="551">
+  </a>
+  <nav class="nav" aria-label="Hoofdmenu">
+    <ul class="nav__list">
+        <li><a class="nav__link" href="kalender.html"><span class="roll"><span data-text="Kalender">Kalender</span></span></a></li>
+        <li><a class="nav__link" href="podcast.html"><span class="roll"><span data-text="Podcast">Podcast</span></span></a></li>
+        <li><a class="nav__link" href="studio-huren.html"><span class="roll"><span data-text="Jouw studio huren">Jouw studio huren</span></span></a></li>
+        <li><a class="nav__link" href="achter-de-schermen.html"><span class="roll"><span data-text="Achter de schermen">Achter de schermen</span></span></a></li>
+        <li><a class="nav__link" href="solid-flex.html"><span class="roll"><span data-text="SOLID Flex">SOLID Flex</span></span></a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+    <span class="menu-btn__text">Menu</span><span class="menu-btn__icon" aria-hidden="true"></span>
+  </button>
+</header>
+
+<div class="menu" id="menu" data-lenis-prevent>
+  <nav aria-label="Mobiel menu">
+    <ul class="menu__list">
+      <li class="menu__item"><a class="menu__link" href="index.html" data-title="Home"><sup>00</sup>Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="kalender.html"><sup>01</sup>Kalender</a></li>
+      <li class="menu__item"><a class="menu__link" href="podcast.html"><sup>02</sup>Podcast</a></li>
+      <li class="menu__item"><a class="menu__link" href="studio-huren.html"><sup>03</sup>Jouw studio huren</a></li>
+      <li class="menu__item"><a class="menu__link" href="achter-de-schermen.html"><sup>04</sup>Achter de schermen</a></li>
+      <li class="menu__item"><a class="menu__link" href="solid-flex.html"><sup>05</sup>SOLID Flex</a></li>
+    </ul>
+  </nav>
+  <div class="menu__foot">
+    <a href="mailto:info@solidcollective.nl">info@solidcollective.nl</a>
+    <span>Lambertusstraat 3, Etten-Leur</span>
+    <a href="https://www.instagram.com/solidcollective.nl" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- 1. INTRODUCTIE — de deuren gaan open -->
+  <section class="hero" data-theme="dark" data-intro>
+    <!-- HERO BANNER — placeholder: vervang .ph door <img> of <video autoplay muted loop playsinline> -->
+    <div class="hero__media">
+      <div class="ph" data-label="Hero &mdash; placeholder beeld / video"></div>
+      <div class="hero__shade"></div>
+    </div>
+
+    <h1 class="display hero__title">
+      <span class="hero__line" data-split="chars">Passie</span>
+      <span class="hero__line hero__line--mid" data-split="chars">de plek</span>
+      <span class="hero__line" data-split="chars">geven<span class="dot"></span></span>
+    </h1>
+
+    <div class="hero__meta">
+      <span></span>
+      <span class="scroll-cue">Scroll &amp; stap binnen<span class="scroll-cue__line"></span></span>
+      <span>Etten-Leur, NL</span>
+    </div>
+
+    <div class="hero__copy">
+      <h2 class="display">De broedplaats voor<br>ondernemend <span class="nowrap">Etten-Leur</span></h2>
+      <div>
+        <p>Waar pioniers, culturele creators en ondernemers samenkomen om hun impact te laten voelen.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="kalender.html" data-title="Kalender"><span class="roll"><span data-text="Bekijk de kalender">Bekijk de kalender</span></span><span class="btn__icon" aria-hidden="true"></span></a>
+          <a class="btn btn--ghost" href="#locatie"><span class="roll"><span data-text="Kom langs">Kom langs</span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ONTDEKKING — manifest -->
+  <section class="section manifesto" data-theme="light">
+    <div class="wrap">
+      <div class="manifesto__head">
+        <span class="label" data-reveal>Onze missie</span>
+        <span class="muted" data-reveal>01 / Manifest</span>
+      </div>
+      <p class="manifesto__text">
+        Idee&euml;n moeten niet verstoffen in hoofden, maar <span class="hl">botsen, bruisen</span> en tot leven barsten.
+        In een community waar samenkomst de <span class="hl">vonk</span> is en samenwerking het <span class="hl">vuur</span>.
+      </p>
+      <div class="manifesto__foot">
+        <p data-reveal>SOLID Collective is een stichting, ontstaan uit de wens om Etten-Leur aantrekkelijker te maken voor jonge ondernemers. We verbinden mensen die willen bouwen, helpen hen hun idee&euml;n te realiseren en bieden de ruimte en middelen om dat te doen.</p>
+        <a class="arrow-link" href="achter-de-schermen.html" data-title="Achter de schermen" data-reveal>Achter de schermen <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. VERKENNING — drie pijlers -->
+  <section class="pillars" data-theme="dark">
+    <div class="pillars__stage">
+      <div class="pillars__top">
+        <span class="label">Waar we voor staan</span>
+        <span class="pillars__count"><span>01</span> / 03</span>
+      </div>
+      <div class="pillars__window display" aria-hidden="true">
+        <div class="pillars__words">
+          <span class="pillars__word">Connect</span>
+          <span class="pillars__word">Dream</span>
+          <span class="pillars__word">Achieve</span>
+        </div>
+      </div>
+      <div class="pillars__bottom">
+        <div class="pillars__progress"><div class="pillars__bar"></div></div>
+        <div class="pillars__texts">
+          <div class="pillars__text">
+            <h3 class="display display--h3">Verbind</h3>
+            <p>Groei gebeurt nooit in een vacu&uuml;m. Wij brengen talenten bij elkaar om samen tot oplossingen te komen die je alleen niet vindt.</p>
+          </div>
+          <div class="pillars__text">
+            <h3 class="display display--h3">Deel</h3>
+            <p>Kennis is de enige grondstof die groeit als je het deelt. Binnen onze hub inspireren we elkaar met ervaringen en expertise.</p>
+          </div>
+          <div class="pillars__text">
+            <h3 class="display display--h3">Faciliteer</h3>
+            <p>Met de juiste omgeving en middelen nemen we de ruis weg, zodat jij meer uit je business haalt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TRANSFORMATIE — aanbod, horizontale reis -->
+  <section class="offer" data-theme="orange">
+    <div class="offer__pin">
+      <div class="wrap offer__head">
+        <h2 class="display display--h2" data-split="chars">Wat is er<br>te beleven<span class="dot"></span></h2>
+        <p data-reveal>Van high-end mediastudio tot diepgaande netwerksessies. Vijf deuren, &eacute;&eacute;n community.</p>
+      </div>
+      <div class="offer__track">
+        <article class="offer__panel">
+          <div class="offer__num"><span>01</span><span>Events</span></div>
+          <div class="media"><div class="ph" data-label="Beeld &mdash; Kalender"></div></div>
+          <h3 class="display">Kalender</h3>
+          <p>Connect &amp; Grow, lezingen, masterminds en netwerkborrels. Ontmoet de ondernemers die je verder helpen.</p>
+          <a class="arrow-link offer__link" href="kalender.html" data-title="Kalender">Ontdek <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+        </article>
+        <article class="offer__panel">
+          <div class="offer__num"><span>02</span><span>SOLID Talks</span></div>
+          <div class="media"><div class="ph" data-label="Beeld &mdash; Podcast"></div></div>
+          <h3 class="display">Podcast</h3>
+          <p>Rauwe verhalen van ondernemers uit de regio. Geen gepolijste praatjes, maar echte lessen.</p>
+          <a class="arrow-link offer__link" href="podcast.html" data-title="Podcast">Ontdek <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+        </article>
+        <article class="offer__panel">
+          <div class="offer__num"><span>03</span><span>Studio &amp; ruimtes</span></div>
+          <div class="media"><div class="ph" data-label="Beeld &mdash; Jouw studio huren"></div></div>
+          <h3 class="display">Jouw studio huren</h3>
+          <p>Podcaststudio, creative room, zaal of een eigen kantoor. Per uur of voor vast.</p>
+          <a class="arrow-link offer__link" href="studio-huren.html" data-title="Jouw studio huren">Ontdek <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+        </article>
+        <article class="offer__panel">
+          <div class="offer__num"><span>04</span><span>Ons verhaal</span></div>
+          <div class="media"><div class="ph" data-label="Beeld &mdash; Achter de schermen"></div></div>
+          <h3 class="display">Achter de schermen</h3>
+          <p>Van een gemis naar beweging. Ontmoet de stichting en het dreamteam achter SOLID.</p>
+          <a class="arrow-link offer__link" href="achter-de-schermen.html" data-title="Achter de schermen">Ontdek <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+        </article>
+        <article class="offer__panel">
+          <div class="offer__num"><span>05</span><span>Flexwerken</span></div>
+          <div class="media"><div class="ph" data-label="Beeld &mdash; SOLID Flex"></div></div>
+          <h3 class="display">SOLID Flex</h3>
+          <p>Schuif aan tussen ondernemers. Flexibel werken met de community om de hoek.</p>
+          <a class="arrow-link offer__link" href="solid-flex.html" data-title="SOLID Flex">Ontdek <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+        </article>
+        <div class="offer__end">
+          <span class="display display--h3">Eén plek.<br>Alles om te bouwen.</span>
+          <a class="btn btn--primary" href="https://chat.whatsapp.com/D6rDccdxVZB2Y5k4qvl4P9" target="_blank" rel="noopener"><span class="roll"><span data-text="Word deel van SOLID">Word deel van SOLID</span></span><span class="btn__icon" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="marquee" data-theme="dark" aria-label="Verbind, droom, realiseer">
+    <div class="marquee__track">
+      <div class="marquee__group" aria-hidden="true"><span>Verbind</span><i class="sq"></i><span class="outline">Droom</span><i class="sq"></i><span>Realiseer</span><i class="sq"></i></div><div class="marquee__group" aria-hidden="true"><span>Verbind</span><i class="sq"></i><span class="outline">Droom</span><i class="sq"></i><span>Realiseer</span><i class="sq"></i></div><div class="marquee__group" aria-hidden="true"><span>Verbind</span><i class="sq"></i><span class="outline">Droom</span><i class="sq"></i><span>Realiseer</span><i class="sq"></i></div>
+    </div>
+  </section>
+
+  <!-- LOCATIE — Google Maps in merkkleuren -->
+  <section class="section location" id="locatie" data-theme="light">
+    <div class="wrap location__grid">
+      <div class="location__info">
+        <span class="label" data-reveal>Locatie</span>
+        <h2 class="display" data-split="chars">Lambertusstraat<br>3<span class="dot"></span></h2>
+        <p class="lead" data-reveal>Midden in Etten-Leur. De deur staat open voor iedereen die gelooft in de kracht van lokaal talent.</p>
+        <dl class="location__list" data-reveal>
+          <div><dt>Adres</dt><dd>Lambertusstraat 3, 4872 XA Etten-Leur</dd></div>
+          <div><dt>Contact</dt><dd><a class="underline-link" href="mailto:info@solidcollective.nl">info@solidcollective.nl</a></dd></div>
+          <div><dt>Telefoon</dt><dd><a class="underline-link" href="tel:+31616178952">+31 6 16 17 89 52</a></dd></div>
+        </dl>
+        <div class="location__actions" data-reveal>
+          <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&destination=Lambertusstraat+3,+4872+XA+Etten-Leur" target="_blank" rel="noopener"><span class="roll"><span data-text="Plan je route">Plan je route</span></span><span class="btn__icon" aria-hidden="true"></span></a>
+          <a class="btn btn--ghost" href="mailto:info@solidcollective.nl"><span class="roll"><span data-text="Mail ons">Mail ons</span></span></a>
+        </div>
+      </div>
+      <div class="location__map" data-clip>
+        <div class="map" id="map" role="region" aria-label="Kaart van Lambertusstraat 3, Etten-Leur"></div>
+        <div class="map__badge"><span class="map__badge-sq"></span><span><strong>SOLID Collective</strong>Lambertusstraat 3</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CALL TO ACTION — community -->
+  <section class="section community" data-theme="dark">
+    <div class="wrap">
+      <span class="label" data-reveal>Ontmoet de community</span>
+      <h2 class="display community__title" data-split="chars" style="margin-top:32px">Groei niet alleen.<br><span class="accent">Groei samen</span><span class="dot"></span></h2>
+      <p data-reveal>Altijd als eerste op de hoogte van events, samenwerkingen en exclusieve kansen. Scan, join en mis geen enkel moment.</p>
+      <a class="btn btn--primary btn--xl" href="https://chat.whatsapp.com/D6rDccdxVZB2Y5k4qvl4P9" target="_blank" rel="noopener" data-magnetic data-reveal><span class="roll"><span data-text="Join de WhatsApp community">Join de WhatsApp community</span></span><span class="btn__icon" aria-hidden="true"></span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact" data-footer>
+  <div class="footer__inner">
+    <div class="wrap">
+
+      <div class="footer__cta">
+        <h2 class="display" data-split="lines">Kom langs.<br>Bouw mee<span class="dot"></span></h2>
+        <div class="footer__cta-side">
+          <a class="footer__mail underline-link" href="mailto:info@solidcollective.nl">info@solidcollective.nl</a>
+          <div><a class="btn btn--primary" href="https://chat.whatsapp.com/D6rDccdxVZB2Y5k4qvl4P9" target="_blank" rel="noopener" data-magnetic><span class="roll"><span data-text="Join de community">Join de community</span></span><span class="btn__icon" aria-hidden="true"></span></a></div>
+        </div>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h2>Menu</h2>
+          <ul>
+          <li><a class="underline-link" href="index.html" data-title="Home">Home</a></li>
+          <li><a class="underline-link" href="kalender.html">Kalender</a></li>
+          <li><a class="underline-link" href="podcast.html">Podcast</a></li>
+          <li><a class="underline-link" href="studio-huren.html">Jouw studio huren</a></li>
+          <li><a class="underline-link" href="achter-de-schermen.html">Achter de schermen</a></li>
+          <li><a class="underline-link" href="solid-flex.html">SOLID Flex</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2>Bezoek</h2>
+          <address>Lambertusstraat 3<br>4872 XA Etten-Leur</address>
+        </div>
+        <div class="footer__col">
+          <h2>Contact</h2>
+          <ul>
+            <li><a class="underline-link" href="mailto:info@solidcollective.nl">E-mail</a></li>
+            <li><a class="underline-link" href="tel:+31616178952">+31 6 16 17 89 52</a></li>
+            <li><a class="underline-link" href="https://www.google.com/maps/dir/?api=1&destination=Lambertusstraat+3,+4872+XA+Etten-Leur" target="_blank" rel="noopener">Route plannen</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2>Volg</h2>
+          <ul>
+            <li><a class="underline-link" href="https://www.instagram.com/solidcollective.nl" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a class="underline-link" href="https://chat.whatsapp.com/D6rDccdxVZB2Y5k4qvl4P9" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--wide">
+          <!-- SLOT: inschrijfformulier kantoorruimtes komt hier -->
+          <div class="footer__slot" data-slot="inschrijfformulier-kantoorruimtes">
+            <span class="pill pill--live">Nu beschikbaar</span>
+            <h3>Een eigen kantoor bij SOLID?</h3>
+            <p>Bekijk de beschikbare kantoorruimtes en reageer direct.</p>
+            <a class="arrow-link" href="studio-huren.html#kantoren" data-title="Jouw studio huren">Bekijk kantoorruimtes <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="footer__legal">
+        <span>&copy; 2026 Stichting SOLID Collective &mdash; Etten-Leur</span>
+        <span>Verbind &middot; Droom &middot; Realiseer</span>
+        <a class="to-top" href="#">Terug naar boven</a>
+        <a class="footer__logo" href="index.html" data-title="Home" aria-label="SOLID Collective — naar home">
+          <img src="images/logos/solid-logo-white.png" alt="" width="1281" height="551">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="page-transition" aria-hidden="true"><div class="page-transition__title"></div></div>
+<div class="grain" aria-hidden="true"></div>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/SplitText.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/config.js?v=1"></script>
+<script src="js/lenis-init.js?v=1"></script>
+<script src="js/main.js?v=1"></script>
+<script src="js/map.js?v=1"></script>
+</body>
+</html>

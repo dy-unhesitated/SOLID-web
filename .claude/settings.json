@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m http.server *)",
+      "Bash(lsof -ti:8091*)",
+      "Bash(lsof -i :8091*)",
+      "Bash(kill *)",
+      "Bash(pkill -f \"http.server*\")",
+      "Bash(curl -s -o /dev/null -w * http://localhost:8091*)",
+      "Bash(curl -s http://localhost:8091*)",
+      "Bash(curl -sI http://localhost:8091*)"
+    ]
+  }
+}
