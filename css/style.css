@@ -1135,6 +1135,41 @@ body[data-theme="orange"] .btn--primary:hover { color: var(--black); }
 .trio__num { font-family: var(--font-display); font-size: 1.25rem; color: var(--accent-text); }
 .trio__item p { color: var(--muted); }
 
+/* Duo: twee kanten naast elkaar (Voor wie) */
+.duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+}
+.duo__item {
+  padding: 40px clamp(24px, 4vw, 64px) 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+.duo__item + .duo__item { padding-left: clamp(24px, 4vw, 64px); border-left: 1px solid var(--line); }
+.duo__item p { color: var(--muted); max-width: 48ch; }
+.duo__item .btn { margin-top: auto; }
+.duo__tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+  max-width: 480px;
+}
+/* Witte tegels: partnerlogo's zijn in eigen kleuren en soms met witte achtergrond */
+.logos__item {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  padding: 10px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+}
+.logos__item img { max-width: 100%; max-height: 40px; width: auto; height: auto; object-fit: contain; }
+
 /* Rows: agenda, afleveringen, tarieven */
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
 .filter {
@@ -1232,6 +1267,13 @@ body[data-theme="orange"] .btn--primary:hover { color: var(--black); }
   font-weight: 500;
   max-width: 22em;
 }
+/* Bestuursquotes: in een .trio, zonder foto */
+.board-quote { margin: 0; display: flex; flex-direction: column; gap: 24px; height: 100%; }
+.board-quote::before { content: "\201C"; font-family: var(--font-display); font-size: 4rem; line-height: .6; color: var(--orange); }
+.board-quote p { color: var(--fg) !important; font-size: clamp(1.125rem, 1.6vw, 1.375rem); line-height: 1.35; font-weight: 500; }
+.board-quote cite { margin-top: auto; font-style: normal; font-size: var(--fs-label); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.board-quote cite b { display: block; color: var(--fg); letter-spacing: .08em; margin-bottom: 4px; }
+
 .quote cite { display: block; margin-top: 28px; font-style: normal; font-size: var(--fs-label); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
 
 /* Stats */
@@ -1423,6 +1465,9 @@ body[data-theme="orange"] .btn--primary:hover { color: var(--black); }
   .pricing { grid-template-columns: 1fr; }
   .trio__item + .trio__item,
   .plan + .plan { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .duo { grid-template-columns: 1fr; }
+  .duo__item { padding-right: 0; padding-bottom: 40px; }
+  .duo__item + .duo__item { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
 
   .team { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .person:nth-child(3n + 2) { margin-top: 0; }
