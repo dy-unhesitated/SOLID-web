@@ -1245,6 +1245,111 @@ body[data-theme="orange"] .btn--primary:hover { color: var(--black); }
 .plan li::before { content: ""; width: 6px; height: 6px; margin-top: .6em; background: var(--accent); border-radius: 1px; flex-shrink: 0; }
 .plan--featured .plan__price { color: var(--accent-text); }
 .note { margin-top: 24px; font-size: var(--fs-small); color: var(--muted); }
+.pricing--duo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.plan > p { color: var(--muted); max-width: 40ch; }
+.plan > .btn, .plan > .arrow-link { margin-top: auto; align-self: flex-start; }
+
+/* Membership: prijs + knop in het abonnementsblok (Flex) */
+.membership {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.membership__price { font-family: var(--font-display); font-size: clamp(3rem, 5vw, 5rem); line-height: .9; color: var(--accent-text); }
+.membership__price small { display: block; margin-top: 10px; font-family: var(--font-body); font-size: 1rem; color: var(--muted); }
+.membership__parts { display: flex; flex-wrap: wrap; gap: 16px 40px; }
+
+/* Gallery: een grote foto met twee kleinere ernaast (Flex co-working) */
+.gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(12px, 1.5vw, 24px);
+}
+.gallery > .media { aspect-ratio: 3 / 2; }
+.gallery .media > :not(.space__badge) { transition: transform 1s var(--ease-out); }
+.gallery .media:hover > :not(.space__badge) { transform: scale(1.04); }
+.gallery > .gallery__main { grid-row: 1 / span 2; aspect-ratio: auto; }
+
+/* Spaces: ruimtes met foto, drie per rij (Flex) */
+.spaces {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(40px, 6vh, 72px) clamp(16px, 2vw, 32px);
+}
+.space { display: flex; flex-direction: column; align-items: flex-start; }
+.space .media { width: 100%; aspect-ratio: 3 / 2; margin-bottom: 20px; }
+.space .media > :not(.space__badge) { transition: transform 1s var(--ease-out); }
+.space:hover .media > :not(.space__badge) { transform: scale(1.04); }
+.space__num { font-family: var(--font-display); font-size: 1.25rem; color: var(--accent-text); }
+.space h3 { margin-top: 8px; font-family: var(--font-display); font-weight: 400; font-size: clamp(1.5rem, 2vw, 2rem); text-transform: uppercase; line-height: 1; }
+.space p { color: var(--muted); font-size: .9375rem; margin-top: 8px; }
+.space .btn { margin-top: 24px; }
+/* Nog niet gebouwde Space: foto grijs, kleurt op bij hover */
+.space.space--soon .media > img { filter: grayscale(1) brightness(.85); transition: filter 1s var(--ease-out), transform 1s var(--ease-out); }
+.space--soon:hover .media > img { filter: none; }
+.space__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--black);
+  color: var(--white);
+  border-color: transparent;
+}
+
+/* Bonus: compacte kaarten, eerste kaart breed (Flex) */
+.bonus {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 1.5vw, 24px);
+}
+.bonus__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(24px, 3vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+.bonus__item--wide { grid-column: span 2; }
+.bonus__tag { font-size: var(--fs-label); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-text); }
+.bonus__item h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.5rem, 2.2vw, 2.125rem); text-transform: uppercase; line-height: 1; }
+.bonus__item p { color: var(--muted); max-width: 48ch; }
+
+/* Callout: opvallende regel met knop onder een blok */
+.callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 48px;
+  margin-top: clamp(48px, 8vh, 96px);
+  padding: clamp(28px, 4vh, 40px) clamp(24px, 3vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+.callout__title { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.75rem, 3vw, 2.75rem); text-transform: uppercase; line-height: 1; }
+.callout__text p { margin-top: 12px; color: var(--muted); max-width: 52ch; }
+.callout .btn { flex-shrink: 0; }
+.callout__text .pill { margin-bottom: 16px; }
+.callout:first-child { margin-top: 0; }
+.section--tight { padding-block: clamp(48px, 8vh, 96px); }
+
+/* Perks: genummerde voordelen als lijst (Flex) */
+.perks { border-top: 1px solid var(--line); }
+.perks__item {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px 24px;
+  align-items: baseline;
+  padding: clamp(20px, 3vh, 32px) 0;
+  border-bottom: 1px solid var(--line);
+}
+.perks__num { grid-column: 1 / span 1; font-family: var(--font-display); font-size: 1.25rem; color: var(--accent-text); }
+.perks__title { grid-column: 2 / span 4; font-family: var(--font-display); font-weight: 400; font-size: clamp(1.5rem, 2.2vw, 2.125rem); line-height: 1; text-transform: uppercase; }
+.perks__item p { grid-column: 7 / span 6; color: var(--muted); max-width: 52ch; }
+
 
 /* Team */
 .team {
@@ -1462,7 +1567,8 @@ body[data-theme="orange"] .btn--primary:hover { color: var(--black); }
   .page-hero__media { aspect-ratio: 4 / 3; min-height: 0; }
 
   .trio,
-  .pricing { grid-template-columns: 1fr; }
+  .pricing,
+  .pricing--duo { grid-template-columns: 1fr; }
   .trio__item + .trio__item,
   .plan + .plan { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
   .duo { grid-template-columns: 1fr; }
@@ -1480,6 +1586,14 @@ body[data-theme="orange"] .btn--primary:hover { color: var(--black); }
   .row > :last-child { grid-column: 2; justify-self: start; }
 
   .section-head { flex-direction: column; align-items: flex-start; }
+  .bonus { grid-template-columns: 1fr 1fr; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .gallery > .gallery__main { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 3 / 2; }
+  .spaces { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .perks__num { grid-column: 1 / span 2; }
+  .perks__title,
+  .perks__item p { grid-column: 3 / -1; }
 
   .footer__cta .display,
   .footer__cta-side { grid-column: 1 / -1; }
@@ -1504,6 +1618,10 @@ body[data-theme="orange"] .btn--primary:hover { color: var(--black); }
 
 @media (max-width: 560px) {
   .team { grid-template-columns: 1fr; }
+  .spaces { grid-template-columns: 1fr; }
+  .bonus { grid-template-columns: 1fr; }
+  .bonus__item--wide { grid-column: auto; }
+  .callout { flex-direction: column; align-items: flex-start; }
   .person:nth-child(even) { margin-top: 0; }
   .footer__col { grid-column: span 6; }
   .location__list div { grid-template-columns: 1fr; gap: 2px; }
