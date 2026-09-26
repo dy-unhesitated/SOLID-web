@@ -1318,6 +1318,22 @@ body[data-theme="orange"] .btn--primary:hover { color: var(--black); }
 .bonus__item h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.5rem, 2.2vw, 2.125rem); text-transform: uppercase; line-height: 1; }
 .bonus__item p { color: var(--muted); max-width: 48ch; }
 
+/* Projects: afwisselend foto links/rechts (Impact) */
+.projects { display: grid; gap: clamp(64px, 12vh, 140px); }
+.project {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+  align-items: center;
+}
+.project .media { grid-column: 1 / span 6; aspect-ratio: 3 / 2; }
+.project__body { grid-column: 8 / span 5; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.project:nth-child(even) .media { grid-column: 7 / span 6; grid-row: 1; }
+.project:nth-child(even) .project__body { grid-column: 1 / span 5; grid-row: 1; }
+.project__title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 3.4vw, 3.5rem); text-transform: uppercase; line-height: .95; }
+.project__body p { color: var(--muted); max-width: 52ch; }
+.project .arrow-link[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+
 /* Callout: opvallende regel met knop onder een blok */
 .callout {
   display: flex;
@@ -1586,6 +1602,10 @@ body[data-theme="orange"] .btn--primary:hover { color: var(--black); }
   .row > :last-child { grid-column: 2; justify-self: start; }
 
   .section-head { flex-direction: column; align-items: flex-start; }
+  .project .media,
+  .project__body,
+  .project:nth-child(even) .media,
+  .project:nth-child(even) .project__body { grid-column: 1 / -1; grid-row: auto; }
   .bonus { grid-template-columns: 1fr 1fr; }
   .gallery { grid-template-columns: 1fr 1fr; }
   .gallery > .gallery__main { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 3 / 2; }
