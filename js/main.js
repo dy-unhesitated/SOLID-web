@@ -540,3 +540,26 @@ document.querySelectorAll("[data-fp]").forEach((map) => {
   map.querySelectorAll("a").forEach((a) => a.addEventListener("focus", () => show(a.querySelector("[data-fp-title]"))));
 });
 
+// YouTube-pop-up: knop met data-youtube laadt de video pas bij klikken (privacyvriendelijk)
+(() => {
+  const dialog = document.getElementById("yt-video");
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  const frame = dialog.querySelector(".video-modal__frame");
+  document.querySelectorAll("[data-youtube]").forEach((btn) => {
+    const id = btn.dataset.youtube;
+    if (!id) return;
+    btn.disabled = false;
+    btn.addEventListener("click", () => {
+      frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+      dialog.showModal();
+      if (window.lenis) window.lenis.stop();
+    });
+  });
+  dialog.querySelector("[data-video-close]")?.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+  dialog.addEventListener("close", () => {
+    frame.innerHTML = "";
+    if (window.lenis) window.lenis.start();
+  });
+})();
+
