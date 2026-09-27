@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="nl" data-page="offices">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLID Offices — SOLID Collective</title>
+<meta name="description" content="SOLID Offices: huur een eigen kantoor midden in de community van SOLID Collective in Etten-Leur, met alles van SOLID Flex erbij.">
+<meta name="theme-color" content="#090909">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg?v=1">
+<link rel="preload" href="fonts/impact.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lenis.css">
+<link rel="stylesheet" href="css/style.css?v=1">
+<script>
+  // Startstaat vóór eerste paint: preloader (1e bezoek home) of transitie-doek (na klik)
+  (function (h) {
+    h.classList.add("js");
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    try {
+      if (sessionStorage.getItem("solid-transition") !== null) h.classList.add("is-arriving");
+      else if (h.dataset.page === "home" && !sessionStorage.getItem("solid-visited")) h.classList.add("is-loading");
+    } catch (e) {}
+  })(document.documentElement);
+</script>
+</head>
+<body data-theme="dark">
+
+<a class="skip-link" href="#main">Naar inhoud</a>
+
+<header class="site-header">
+  <a class="logo" href="index.html" data-title="Home" aria-label="SOLID Collective — naar home">
+    <img class="logo__light" src="images/logos/solid-logo-white.png" alt="" width="1281" height="551">
+    <img class="logo__dark" src="images/logos/solid-logo-black.png" alt="" width="1281" height="551">
+  </a>
+  <nav class="nav" aria-label="Hoofdmenu">
+    <ul class="nav__list">
+        <li><a class="nav__link" href="kalender.html"><span class="roll"><span data-text="Kalender">Kalender</span></span></a></li>
+        <li><a class="nav__link" href="podcast.html"><span class="roll"><span data-text="Podcast">Podcast</span></span></a></li>
+        <li><a class="nav__link" href="projecten.html"><span class="roll"><span data-text="Projecten">Projecten</span></span></a></li>
+        <li><a class="nav__link" href="solid-flex.html"><span class="roll"><span data-text="Co-working &amp; Spaces">Co-working &amp; Spaces</span></span></a></li>
+        <li><a class="nav__link" href="kantoren.html" aria-current="page"><span class="roll"><span data-text="Kantoren">Kantoren</span></span></a></li>
+        <li><a class="nav__link" href="achter-de-schermen.html"><span class="roll"><span data-text="Over ons">Over ons</span></span></a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+    <span class="menu-btn__text">Menu</span><span class="menu-btn__icon" aria-hidden="true"></span>
+  </button>
+</header>
+
+<div class="menu" id="menu" data-lenis-prevent>
+  <nav aria-label="Mobiel menu">
+    <ul class="menu__list">
+      <li class="menu__item"><a class="menu__link" href="index.html" data-title="Home"><sup>00</sup>Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="kalender.html"><sup>01</sup>Kalender</a></li>
+      <li class="menu__item"><a class="menu__link" href="podcast.html"><sup>02</sup>Podcast</a></li>
+      <li class="menu__item"><a class="menu__link" href="projecten.html"><sup>03</sup>Projecten</a></li>
+      <li class="menu__item"><a class="menu__link" href="solid-flex.html"><sup>04</sup>Co-working &amp; Spaces</a></li>
+      <li class="menu__item"><a class="menu__link" href="kantoren.html" aria-current="page"><sup>05</sup>Kantoren</a></li>
+      <li class="menu__item"><a class="menu__link" href="achter-de-schermen.html"><sup>06</sup>Over ons</a></li>
+    </ul>
+  </nav>
+  <div class="menu__foot">
+    <a href="mailto:info@solidcollective.nl">info@solidcollective.nl</a>
+    <span>Lambertusstraat 3, Etten-Leur</span>
+    <a href="https://www.instagram.com/solidcollective.nl" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</div>
+<main id="main">
+  <section class="page-hero" data-theme="dark" data-intro>
+    <div class="wrap">
+      <div class="page-hero__meta">
+        <span class="label" data-reveal>05 &mdash; SOLID Offices</span>
+        <span class="muted" data-reveal>SOLID Collective &middot; Etten-Leur</span>
+      </div>
+      <h1 class="display page-hero__title" data-split="chars">SOLID<br><span class="display--grit">Offices</span><span class="dot"></span></h1>
+      <div class="page-hero__row">
+        <div class="page-hero__side" data-reveal><span class="pill pill--live">Nog 2 kantoren beschikbaar</span></div>
+        <p class="lead" data-reveal>Een eigen plek voor je bedrijf, midden in een community. Bij SOLID Offices huur je een kantoor met je eigen deur, en krijg je alles van SOLID Flex erbij.</p>
+      </div>
+      <div class="media page-hero__media" data-parallax data-clip>
+        <img src="images/hero/kantoren-salon-2048.webp" srcset="images/hero/kantoren-salon-1200.webp 1200w, images/hero/kantoren-salon-2048.webp 2048w" sizes="100vw" width="2048" height="1365" alt="De beautysalon van Fleekbyzo&euml;, een van de kantoren bij SOLID" style="object-position:50% 55%">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kantoren" data-theme="light">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="display display--h2" data-split="chars">Nog twee<br>kantoren vrij<span class="dot"></span></h2>
+        <p data-reveal>Een eigen deur, met een heel pand eromheen. Beweeg over de plattegrond om de ruimtes te zien, of klik op een oranje kantoor.</p>
+      </div>
+      <div class="floorplan" data-reveal>
+        <div class="floorplan__map" data-fp>
+        <svg class="fp" viewBox="190 590 920 1090" role="img" aria-labelledby="fp-title">
+          <defs><pattern id="fp-stripes" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="22" height="22" fill="#FAFAFA"/><rect width="8" height="22" fill="#090909" fill-opacity=".18"/></pattern></defs>
+          <title id="fp-title">Plattegrond van de begane grond van SOLID Collective, met de twee beschikbare kantoren van 15 en 11 m&sup2; in het oranje</title>
+          <g class="fp__room fp__room--use" data-fp-title="Multifunctionele creative space" data-fp-text="Co-working tussen andere ondernemers, met de mediastudio en de meetingroom." data-fp-photo="images/coworking/coworking-groot-800.webp"><rect x="300" y="600" width="210" height="240"/><text x="405" y="716" font-size="22">Multifunctionele</text><text class="fp__sub" x="405" y="742" font-size="18">creative space</text></g>
+          <g class="fp__room fp__room--neutral"><rect x="300" y="840" width="70" height="240"/><text x="335" y="965" font-size="14">Toilet</text></g>
+          <g class="fp__room fp__room--neutral"><polygon points="370,840 440,840 440,1020 510,1020 510,1080 370,1080"/><text x="405" y="965" font-size="13" transform="rotate(-90 405 955)">Doorgang</text></g>
+          <g class="fp__room fp__room--use" data-fp-title="Keuken" data-fp-text="Koffie, thee en lunch, samen met de rest van het pand."><rect x="440" y="840" width="70" height="180"/><text x="475" y="935" font-size="14">Keuken</text></g>
+          <g class="fp__room fp__room--use" data-fp-title="Podium" data-fp-text="Het podium aan de grote zaal, voor presentaties en optredens."><rect x="510" y="600" width="350" height="240"/><text x="685" y="727" font-size="20">Podium</text></g>
+          <g class="fp__room fp__room--use" data-fp-title="Gym" data-fp-text="Vrij te gebruiken als huurder of lid."><rect x="860" y="600" width="160" height="275"/><text x="940" y="745" font-size="22">Gym</text></g>
+          <g class="fp__room fp__room--garden" data-fp-title="Tuin" data-fp-text="Even naar buiten, midden in het pand."><polygon points="1020,600 1100,600 1100,1250 860,1250 860,875 1020,875"/><text x="980" y="1068" font-size="22">Tuin</text></g>
+          <g class="fp__room fp__room--use" data-fp-title="Grote zaal" data-fp-text="Voor events, lessen en trainingen. Ook Hit To Fit traint hier." data-fp-photo="images/spaces/zaal-800.webp"><rect x="510" y="840" width="350" height="560"/><text x="685" y="1130" font-size="28">Grote zaal</text></g>
+          <g class="fp__room fp__room--tenant" data-fp-title="Fleekbyzo&euml;" data-fp-text="De beautysalon van Zoe, 18 m&sup2;." data-fp-photo="images/tenants/fleekbyzoe-salon-800.webp"><polygon points="200,1080 370,1080 370,1360 330,1360 330,1270 200,1270"/><text x="285" y="1171" font-size="17">Fleekbyzo&euml;</text><text class="fp__sub" x="285" y="1192" font-size="14">18 m&sup2;</text></g>
+          <g class="fp__room fp__room--use" data-fp-title="Health &amp; Wellness Studio" data-fp-text="9 m&sup2;, voor behandelingen en sessies."><rect x="370" y="1080" width="140" height="105"/><text x="440" y="1128" font-size="17">Wellness</text><text class="fp__sub" x="440" y="1149" font-size="14">9 m&sup2;</text></g>
+          <a href="#kantoor-11" aria-label="Vrij kantoor 11 m&sup2;"><g class="fp__room fp__room--avail" data-fp-title="Kantoor 11 m&sup2;" data-fp-text="Beschikbaar. Een kale ruimte die je helemaal naar je eigen hand zet." data-fp-photo="images/spaces/makerspace-800.webp"><rect x="370" y="1185" width="140" height="135"/><text x="440" y="1248" font-size="20">Vrij</text><text class="fp__sub" x="440" y="1272" font-size="16">11 m&sup2;</text></g></a>
+          <a href="#kantoor-15" aria-label="Vrij kantoor 15 m&sup2;"><g class="fp__room fp__room--avail" data-fp-title="Kantoor 15 m&sup2;" data-fp-text="Beschikbaar. Ons mooiste kantoor, direct aan de entreehal."><polygon points="200,1270 330,1270 330,1360 370,1360 370,1490 200,1490"/><text x="285" y="1396" font-size="26">Vrij</text><text class="fp__sub" x="285" y="1426" font-size="21">15 m&sup2;</text></g></a>
+          <g class="fp__room fp__room--use" data-fp-title="24/7 lock-in room" data-fp-text="7 m&sup2;, dag en nacht open voor werk dat focus vraagt."><rect x="200" y="1490" width="170" height="120"/><text x="285" y="1546" font-size="17">Lock-in</text><text class="fp__sub" x="285" y="1567" font-size="14">7 m&sup2; &middot; 24/7</text></g>
+          <g class="fp__room fp__room--neutral" data-fp-title="Entreehal" data-fp-text="Hier kom je binnen. De trap gaat naar de zolderkamer."><rect x="370" y="1320" width="140" height="290"/><text x="440" y="1376" font-size="17">Entreehal</text></g>
+          <g class="fp__room fp__room--neighbour" data-fp-title="Jongerenwerk Surplus" data-fp-text="Onze buren in het pand."><polygon points="700,1400 860,1400 860,1610 510,1610 510,1500 700,1500"/><text x="685" y="1556" font-size="20">Surplus</text><text class="fp__sub" x="685" y="1580" font-size="16">jongerenwerk</text></g>
+          <g class="fp__room fp__room--neighbour" data-fp-title="Jongerenwerk Surplus" data-fp-text="Onze buren in het pand."><rect x="860" y="1250" width="240" height="360"/><text x="980" y="1426" font-size="20">Surplus</text><text class="fp__sub" x="980" y="1450" font-size="16">jongerenwerk</text></g>
+          <g class="fp__room fp__room--use fp__room--stairs" data-fp-title="De zolderkamer" data-fp-text="Boven, via de trap in de entreehal. Relaxt werken met een bank en een muziekhoek."><rect x="510" y="1400" width="190" height="100"/><path d="M 524 1404 v 92"/><path d="M 538 1404 v 92"/><path d="M 552 1404 v 92"/><path d="M 566 1404 v 92"/><path d="M 580 1404 v 92"/><path d="M 594 1404 v 92"/><path d="M 608 1404 v 92"/><path d="M 622 1404 v 92"/><path d="M 636 1404 v 92"/><path d="M 650 1404 v 92"/><path d="M 664 1404 v 92"/><path d="M 678 1404 v 92"/><path d="M 692 1404 v 92"/><path class="fp__stairs-arrow" d="M 518 1484 H 690 m -12 -10 l 12 10 l -12 10"/><text x="605" y="1440" font-size="18">Zolderkamer</text><text class="fp__sub" x="605" y="1462" font-size="14">via de trap</text></g>
+          <g class="fp__entry"><path d="M 440 1660 v -44 m -14 14 l 14 -14 l 14 14"/><text x="462" y="1652" font-size="18">Ingang</text></g>
+        </svg>
+          <ul class="fp-legend">
+            <li><span class="fp-legend__swatch fp-legend__swatch--avail"></span>Beschikbaar</li>
+            <li><span class="fp-legend__swatch fp-legend__swatch--use"></span>Gebruik je mee als huurder</li>
+            <li><span class="fp-legend__swatch fp-legend__swatch--tenant"></span>Huurder</li>
+            <li><span class="fp-legend__swatch fp-legend__swatch--neighbour"></span>Buren</li>
+          </ul>
+        </div>
+        <!-- PREVIEW — standaard de voordeur; bij hover de foto van de ruimte -->
+        <figure class="fp-preview" data-fp-preview data-fp-default-title="De voordeur" data-fp-default-text="Lambertusstraat 3, Etten-Leur. Beweeg over de plattegrond om de ruimtes te zien.">
+          <div class="media"><div class="ph" data-label="Foto voordeur"></div></div>
+          <figcaption>
+            <span class="fp-preview__title">De voordeur</span>
+            <span class="fp-preview__text">Lambertusstraat 3, Etten-Leur. Beweeg over de plattegrond om de ruimtes te zien.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="fp-video">
+        <button class="video-card" type="button" data-video-open="pitch-video" data-reveal>
+          <span class="video-card__bg" style="background-image:url('videos/kantoren-pitch-poster.webp')" aria-hidden="true"></span>
+          <img class="video-card__poster" src="videos/kantoren-pitch-poster.webp" alt="" width="720" height="1280" loading="lazy">
+          <span class="video-card__text">
+            <span class="label">Sneak peek &middot; 1 min</span>
+            <span class="video-card__title">Bekijk de promovideo</span>
+          </span>
+          <span class="video-card__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+          <span class="sr-only">Speel de video af</span>
+        </button>
+      </div>
+
+      <!-- KANTOREN — prijzen en foto's volgen -->
+      <div class="offices">
+        <article class="office" id="kantoor-15" data-reveal>
+          <div class="media"><div class="ph" data-label="Foto kantoor 15 m&sup2;"></div><span class="pill space__badge space__badge--accent">Beschikbaar</span></div>
+          <div class="office__head"><h3 class="office__title">Kantoor 15&nbsp;m&sup2;</h3><div class="office__price"><small>Prijs volgt</small></div></div>
+          <p>Ons mooiste kantoor, direct aan de entreehal. Handig als je klanten ontvangt.</p>
+          <a class="btn btn--primary" href="mailto:info@solidcollective.nl?subject=Bezichtiging%20kantoor%2015%20m2" data-magnetic><span class="roll"><span data-text="Plan een bezichtiging">Plan een bezichtiging</span></span><span class="btn__icon" aria-hidden="true"></span></a>
+        </article>
+        <article class="office" id="kantoor-11" data-reveal="0.1">
+          <div class="media"><img src="images/spaces/makerspace-1200.webp" srcset="images/spaces/makerspace-800.webp 800w, images/spaces/makerspace-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="594" alt="Het lege kantoor van 11 m&sup2;" loading="lazy" style="object-position:50% 60%"><span class="pill space__badge space__badge--accent">Beschikbaar</span></div>
+          <div class="office__head"><h3 class="office__title">Kantoor 11&nbsp;m&sup2;</h3><div class="office__price"><small>Prijs volgt</small></div></div>
+          <p>Een kale ruimte die je helemaal naar je eigen hand zet.</p>
+          <a class="btn btn--ghost" href="mailto:info@solidcollective.nl?subject=Bezichtiging%20kantoor%2011%20m2" data-magnetic><span class="roll"><span data-text="Plan een bezichtiging">Plan een bezichtiging</span></span><span class="btn__icon" aria-hidden="true"></span></a>
+        </article>
+      </div>
+    </div>
+    <dialog class="video-modal" id="pitch-video" aria-label="Video: kantoren bij SOLID Collective">
+      <button class="video-modal__close" type="button" data-video-close aria-label="Sluit video">&times;</button>
+      <video controls playsinline preload="none" poster="videos/kantoren-pitch-poster.webp" width="720" height="1280">
+        <source src="videos/kantoren-pitch-720.mp4" type="video/mp4">
+      </video>
+    </dialog>
+  </section>
+
+  <section class="section" id="wat-je-krijgt" data-theme="dark">
+    <div class="wrap split">
+      <div class="split__aside"><span class="label" data-reveal>Wat je krijgt</span></div>
+      <div class="split__main">
+        <h2 class="display display--h2" data-split="chars">Jouw deur,<br>ons hele pand<span class="dot"></span></h2>
+        <p class="lead" data-reveal>Een eigen kantoor dat je helemaal naar je hand zet, met alles van SOLID eromheen.</p>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:clamp(48px,8vh,96px)">
+      <ul class="perks">
+        <li class="perks__item" data-reveal><span class="perks__num">01</span><h3 class="perks__title">Een lege ruimte, helemaal van jou</h3><p>Je krijgt een lege, afsluitbare ruimte die je inricht zoals jij wilt. Jouw plek, en dus ook jouw verantwoordelijkheid: schoonhouden doe je zelf.</p></li>
+        <li class="perks__item" data-reveal><span class="perks__num">02</span><h3 class="perks__title">Energie en wifi inbegrepen</h3><p>Energie zit in de huur en wifi is er in het hele pand.</p></li>
+        <li class="perks__item" data-reveal><span class="perks__num">03</span><h3 class="perks__title">Alles van SOLID Flex erbij</h3><p>De co-workingruimtes, alle Spaces en de gym gebruik je gewoon mee.</p></li>
+        <li class="perks__item" data-reveal><span class="perks__num">04</span><h3 class="perks__title">KvK-inschrijfadres</h3><p>Schrijf je bedrijf in op ons adres aan de Lambertusstraat.</p></li>
+        <li class="perks__item" data-reveal><span class="perks__num">05</span><h3 class="perks__title">Een community om je heen</h3><p>Collega-ondernemers, events en een netwerk dat met je meedenkt.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="huurders" data-theme="light">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="display display--h2" data-split="chars">Wie je hier<br>tegenkomt<span class="dot"></span></h2>
+        <p data-reveal>Bij SOLID zit je niet alleen. Dit zijn de ondernemers die hier al hun plek hebben gevonden.</p>
+      </div>
+      <!-- HUURDERS — quotes, links en foto Hit To Fit volgen; eerst toestemming vragen -->
+      <div class="projects">
+        <article class="project" data-reveal>
+          <div class="media"><img src="images/tenants/fleekbyzoe-portret-1200.webp" srcset="images/tenants/fleekbyzoe-portret-800.webp 800w, images/tenants/fleekbyzoe-portret-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="800" alt="Zoe in haar beautysalon Fleekbyzo&euml;" loading="lazy" style="object-position:50% 30%"></div>
+          <div class="project__body">
+            <span class="pill">Huurder &middot; Beautysalon</span>
+            <h3 class="project__title">Fleekbyzo&euml;</h3>
+            <p>Zoe huurt een kantoor bij SOLID en maakte van een kale ruimte haar eigen beautysalon.</p>
+            <blockquote class="board-quote">
+              <p>[Quote Zoe volgt]</p>
+              <cite><b>Zoe</b>Fleekbyzo&euml;</cite>
+            </blockquote>
+            <a class="arrow-link" href="#" aria-disabled="true">Bekijk Fleekbyzo&euml; <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+          </div>
+        </article>
+        <article class="project" data-reveal>
+          <div class="media"><div class="ph" data-label="Foto Hit To Fit"></div></div>
+          <div class="project__body">
+            <span class="pill">Trainer &middot; Kickboksen</span>
+            <h3 class="project__title">Hit To Fit</h3>
+            <p>Akin geeft zijn kickbokstrainingen in de grote zaal van SOLID.</p>
+            <blockquote class="board-quote">
+              <p>[Quote Akin volgt]</p>
+              <cite><b>Akin</b>Hit To Fit</cite>
+            </blockquote>
+            <a class="arrow-link" href="#" aria-disabled="true">Bekijk Hit To Fit <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+          </div>
+        </article>
+      </div>
+      <div class="neighbours" data-reveal>
+        <span class="label">Ook in het gebouw</span>
+        <p><strong>Jongerenwerk Surplus.</strong> Het jongerenwerk zit in hetzelfde pand. Geen huurder van ons, wel een buur met wie we graag samenwerken.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="praktisch" data-theme="dark">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="display display--h2" data-split="chars">Goed om<br>te weten<span class="dot"></span></h2>
+        <p data-reveal>De praktische kant, en antwoorden op wat we het vaakst horen.</p>
+      </div>
+      <!-- PRAKTISCH + FAQ — antwoorden tussen [ ] nog invullen -->
+      <div class="faq-wrap">
+        <div class="facts" data-reveal>
+          <dl>
+          <div><dt>Adres</dt><dd>Lambertusstraat 3<br>4872 XA Etten-Leur</dd></div>
+          <div><dt>Toegang</dt><dd>[Antwoord volgt, bijvoorbeeld: 24/7 met je eigen sleutel]</dd></div>
+          <div><dt>Parkeren</dt><dd>[Antwoord volgt]</dd></div>
+          <div><dt>Bereikbaarheid</dt><dd>[Antwoord volgt, bijvoorbeeld: bus en station]</dd></div>
+          </dl>
+          <a class="arrow-link" href="https://www.google.com/maps/dir/?api=1&destination=Lambertusstraat+3,+4872+XA+Etten-Leur" target="_blank" rel="noopener">Route plannen <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+        </div>
+        <div class="faq" data-reveal="0.1">
+          <details class="faq__item">
+            <summary>Wat kost een kantoor?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p>Kantoor 15 m&sup2; kost [&euro; &hellip;] per maand en kantoor 11 m&sup2; [&euro; &hellip;] per maand. [Incl. of excl. btw: checken met de boekhouder]</p>
+          </details>
+          <details class="faq__item">
+            <summary>Wat zit er in de huur?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p>Energie en wifi zitten erbij, net als alles van SOLID Flex: de co-workingruimtes, de Spaces en de gym. Je kantoor schoonhouden doe je zelf.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Is het kantoor gemeubileerd?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p>Nee, je krijgt een lege ruimte. Zo richt je hem helemaal in zoals jij wilt.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Mag ik mijn kantoor aanpassen of verven?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p>[Antwoord volgt, bijvoorbeeld: ja, in overleg]</p>
+          </details>
+          <details class="faq__item">
+            <summary>Hoe lang huur ik minimaal, en wat is de opzegtermijn?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p>[Antwoord volgt]</p>
+          </details>
+          <details class="faq__item">
+            <summary>Kan ik er met meerdere mensen werken?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p>[Antwoord volgt]</p>
+          </details>
+          <details class="faq__item">
+            <summary>Kan ik mijn bedrijf op dit adres inschrijven?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p>Ja, je kunt je bedrijf bij de KvK inschrijven op ons adres aan de Lambertusstraat.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Wanneer kan ik erin?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p>[Antwoord volgt, bijvoorbeeld: direct, of in overleg]</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="flex" data-theme="light">
+    <div class="wrap">
+      <div class="callout" data-reveal>
+        <div class="callout__text">
+          <h3 class="callout__title">Is flexwerken meer voor jou?</h3>
+          <p>Geen eigen kantoor nodig, maar wel een fijne plek om te werken? Met SOLID Flex gebruik je de co-workingruimtes en alle Spaces voor &euro;50 per maand.</p>
+        </div>
+        <a class="btn btn--ghost" href="solid-flex.html" data-magnetic><span class="roll"><span data-text="Ontdek SOLID Flex">Ontdek SOLID Flex</span></span><span class="btn__icon" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section community" data-theme="orange">
+    <div class="wrap">
+      <span class="label" data-reveal>Bezichtiging</span>
+      <h2 class="display community__title" data-split="chars" style="margin-top:32px">Kom<br>kijken<span class="dot"></span></h2>
+      <p data-reveal>Zien is geloven. Plan een bezichtiging, loop een rondje door het pand en maak kennis met ons.</p>
+      <a class="btn btn--primary btn--xl" href="mailto:info@solidcollective.nl?subject=Bezichtiging%20kantoor%20SOLID" data-magnetic data-reveal><span class="roll"><span data-text="Plan een bezichtiging">Plan een bezichtiging</span></span><span class="btn__icon" aria-hidden="true"></span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact" data-footer>
+  <div class="footer__inner">
+    <div class="wrap">
+
+      <div class="footer__cta">
+        <h2 class="display" data-split="lines">Kom langs.<br>Bouw mee<span class="dot"></span></h2>
+        <div class="footer__cta-side">
+          <a class="footer__mail underline-link" href="mailto:info@solidcollective.nl">info@solidcollective.nl</a>
+          <div><a class="btn btn--primary" href="https://chat.whatsapp.com/D6rDccdxVZB2Y5k4qvl4P9" target="_blank" rel="noopener" data-magnetic><span class="roll"><span data-text="Join de community">Join de community</span></span><span class="btn__icon" aria-hidden="true"></span></a></div>
+        </div>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h2>Menu</h2>
+          <ul>
+          <li><a class="underline-link" href="index.html" data-title="Home">Home</a></li>
+          <li><a class="underline-link" href="kalender.html">Kalender</a></li>
+          <li><a class="underline-link" href="podcast.html">Podcast</a></li>
+          <li><a class="underline-link" href="projecten.html">Projecten</a></li>
+          <li><a class="underline-link" href="solid-flex.html">Co-working &amp; Spaces</a></li>
+          <li><a class="underline-link" href="kantoren.html">Kantoren</a></li>
+          <li><a class="underline-link" href="achter-de-schermen.html">Over ons</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2>Bezoek</h2>
+          <address>Lambertusstraat 3<br>4872 XA Etten-Leur</address>
+        </div>
+        <div class="footer__col">
+          <h2>Contact</h2>
+          <ul>
+            <li><a class="underline-link" href="mailto:info@solidcollective.nl">E-mail</a></li>
+            <li><a class="underline-link" href="tel:+31616178952">+31 6 16 17 89 52</a></li>
+            <li><a class="underline-link" href="https://www.google.com/maps/dir/?api=1&destination=Lambertusstraat+3,+4872+XA+Etten-Leur" target="_blank" rel="noopener">Route plannen</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2>Volg</h2>
+          <ul>
+            <li><a class="underline-link" href="https://www.instagram.com/solidcollective.nl" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a class="underline-link" href="https://chat.whatsapp.com/D6rDccdxVZB2Y5k4qvl4P9" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--wide">
+          <!-- SLOT: inschrijfformulier kantoorruimtes komt hier -->
+          <div class="footer__slot" data-slot="inschrijfformulier-kantoorruimtes">
+            <span class="pill pill--live">Nu beschikbaar</span>
+            <h3>Een eigen kantoor bij SOLID?</h3>
+            <p>Bekijk de beschikbare kantoorruimtes en reageer direct.</p>
+            <a class="arrow-link" href="kantoren.html" data-title="Kantoren">Bekijk kantoorruimtes <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="footer__legal">
+        <span>&copy; 2026 Stichting SOLID Collective &mdash; Etten-Leur</span>
+        <span>Verbind &middot; Droom &middot; Realiseer</span>
+        <a class="to-top" href="#">Terug naar boven</a>
+        <a class="footer__logo" href="index.html" data-title="Home" aria-label="SOLID Collective — naar home">
+          <img src="images/logos/solid-logo-white.png" alt="" width="1281" height="551">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="page-transition" aria-hidden="true"><div class="page-transition__title"></div></div>
+<div class="grain" aria-hidden="true"></div>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/SplitText.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/config.js?v=1"></script>
+<script src="js/lenis-init.js?v=1"></script>
+<script src="js/main.js?v=1"></script>
+</body>
+</html>

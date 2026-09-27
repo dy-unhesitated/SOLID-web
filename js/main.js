@@ -488,3 +488,55 @@
   // Kaart en late afbeeldingen veranderen de hoogte: pins herberekenen
   window.addEventListener("load", () => ScrollTrigger.refresh());
 })();
+
+// Video-pop-up: knop met data-video-open opent een <dialog>, stopt de video bij sluiten
+document.querySelectorAll("[data-video-open]").forEach((btn) => {
+  const dialog = document.getElementById(btn.dataset.videoOpen);
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  const video = dialog.querySelector("video");
+  btn.addEventListener("click", () => {
+    dialog.showModal();
+    if (window.lenis) window.lenis.stop();
+    if (video) video.play().catch(() => {});
+  });
+  dialog.querySelector("[data-video-close]")?.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+  dialog.addEventListener("close", () => {
+    if (video) video.pause();
+    if (window.lenis) window.lenis.start();
+  });
+});
+
+// Plattegrond: hover of focus op een ruimte toont de foto in het voorbeeldvlak
+document.querySelectorAll("[data-fp]").forEach((map) => {
+  const preview = map.parentElement.querySelector("[data-fp-preview]");
+  if (!preview) return;
+  const media = preview.querySelector(".media");
+  const title = preview.querySelector(".fp-preview__title");
+  const text = preview.querySelector(".fp-preview__text");
+  const def = { title: preview.dataset.fpDefaultTitle, text: preview.dataset.fpDefaultText, html: media.innerHTML };
+  let current = null;
+  const show = (room) => {
+    if (room === current) return;
+    current = room;
+    map.querySelectorAll(".is-active").forEach((el) => el.classList.remove("is-active"));
+    if (!room) {
+      media.innerHTML = def.html; title.innerHTML = def.title; text.innerHTML = def.text;
+      return;
+    }
+    room.classList.add("is-active");
+    const d = room.dataset;
+    title.innerHTML = d.fpTitle;
+    text.innerHTML = d.fpText;
+    media.innerHTML = d.fpPhoto
+      ? `<img src="${d.fpPhoto}" alt="">`
+      : `<div class="ph" data-label="Foto volgt"></div>`;
+  };
+  map.querySelectorAll("[data-fp-title]").forEach((room) => {
+    room.addEventListener("mouseenter", () => show(room));
+    room.addEventListener("click", () => show(room));
+  });
+  map.querySelector("svg").addEventListener("mouseleave", () => show(null));
+  map.querySelectorAll("a").forEach((a) => a.addEventListener("focus", () => show(a.querySelector("[data-fp-title]"))));
+});
+
