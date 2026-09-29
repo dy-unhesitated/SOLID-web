@@ -874,7 +874,7 @@ body[data-theme="orange"] .btn--primary:hover { color: var(--black); }
 .pillars__window {
   align-self: center;
   height: 1em;
-  font-size: clamp(5rem, 21vw, 24rem);
+  font-size: clamp(4.5rem, 17vw, 20rem);
   line-height: 1;
   overflow: hidden;
 }
